@@ -42,11 +42,7 @@ public class GoogleSearchSteps {
     	 
     	assertTrue(driver.getTitle().toLowerCase().contains(searchText.toLowerCase()));
     	// Wait for 30 seconds before closing the browser
-        try {
-            Thread.sleep(30000); // 30,000 milliseconds = 30 seconds
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+      
     }
     
 }
