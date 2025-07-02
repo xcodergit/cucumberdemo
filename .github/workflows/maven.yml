@@ -1,7 +1,12 @@
 name: Run Selenium Tests
 
-on:  
-  pull_request:  
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
 
 jobs:  
   selenium-tests:  
