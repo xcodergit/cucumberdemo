@@ -21,6 +21,13 @@ jobs:
           java-version: '11'
           distribution: 'temurin'	
 
+      - name: Upload Cucumber Report
+        if: always() # Ensures this step runs even if tests fail
+        uses: actions/upload-artifact@v3
+        with:
+          name: cucumber-report
+          path: target/cucumber-report.html
+
       - name: Install Dependencies  
         run: mvn install  
 
